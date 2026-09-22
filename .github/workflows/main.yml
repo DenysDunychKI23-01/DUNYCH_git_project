@@ -1,0 +1,13 @@
+name: Demo Workflow
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print info
+        run: |
+          echo "Hello from GitHub Actions!"
+          echo "Repository: ${{ github.repository }}"
+          echo "Run ID: ${{ github.run_id }}"
